@@ -17,14 +17,14 @@ void bottomMain() => runApp(const MyApp(Colors.purple));
 class MyApp extends StatelessWidget {
   const MyApp(this.color, {super.key});
 
-  final Color color;
+  final MaterialColor color;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: color as MaterialColor,
+        primarySwatch: color,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
