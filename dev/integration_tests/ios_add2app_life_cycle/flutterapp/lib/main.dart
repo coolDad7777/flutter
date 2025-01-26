@@ -3,10 +3,10 @@
 // found in the LICENSE file.
 
 import 'package:collection/collection.dart';
-import 'package:flutter/foundation.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
+import 'package:flutter/foundation.dart';
 void main() {
   // Disconnects semantics listener for testing purposes.
   // If the test passes, LifeCycleSpy will rewire the semantics listener back.
@@ -30,7 +30,7 @@ class LifeCycleSpy extends StatefulWidget {
   State<LifeCycleSpy> createState() => _LifeCycleSpyState();
 }
 
-class _LifeCycleSpyState extends State<LifeCycleSpy> with WidgetsBindingObserver {
+class _LifeCycleSpyState extends State<LifeCycleSpy> implements WidgetsBindingObserver {
   final List<AppLifecycleState> _expectedLifeCycleSequence = <AppLifecycleState>[
     AppLifecycleState.detached,
     AppLifecycleState.inactive,

@@ -49,10 +49,8 @@ class Sky extends CustomPainter {
       colors: <Color>[Color(0xFFFFFF00), Color(0xFF0099FF)],
       stops: <double>[0.4, 1.0],
     );
-    canvas.drawRect(
-      rect,
-      Paint()..shader = gradient.createShader(rect),
-    );
+    final Paint paint = Paint()..shader = gradient.createShader(rect);
+    canvas.drawRect(rect, paint);
   }
 
   @override
